@@ -6,7 +6,7 @@ from sqlalchemy.ext.asyncio import (
 )
 from typing import AsyncGenerator
 
-from config.config import config
+from config.config import settings
 
 
 class DBHelper:
@@ -37,10 +37,11 @@ class DBHelper:
         async with self.session_factory() as session:
             yield session
 
+
 db_helper = DBHelper(
-    url=str(config.db.url),
-    echo=config.db.echo,
-    echo_pool=config.db.echo_pool,
-    pool_size=config.db.pool_size,
-    max_overflow=config.db.max_overflow
+    url=str(settings.db.url),
+    echo=settings.db.echo,
+    echo_pool=settings.db.echo_pool,
+    pool_size=settings.db.pool_size,
+    max_overflow=settings.db.max_overflow,
 )

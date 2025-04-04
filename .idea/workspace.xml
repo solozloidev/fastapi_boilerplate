@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ecfb892-0f3e-415b-93c8-f48c8b72653f" name="Changes" comment="add basic deps">
-      <change afterPath="$PROJECT_DIR$/.idea/fastapi_app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="0ecfb892-0f3e-415b-93c8-f48c8b72653f" name="Changes" comment="add black formatter">
+      <change afterPath="$PROJECT_DIR$/fastapi-app/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fastapi-app/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fastapi_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastapi_app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi-app/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi-app/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi-app/config/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi-app/config/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi-app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi-app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi-app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi-app/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi-app/utils/db_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi-app/utils/db_helper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,17 +45,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/zloi/work/fastapi_app/fastapi-app",
+    "settings.editor.selected.configurable": "com.koxudaxi.ruff.RuffConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fastapi-app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/fastapi-app" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fastapi_app" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fastapi-app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fastapi-app/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -118,8 +156,141 @@
       <option name="project" value="LOCAL" />
       <updated>1743526484718</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="create basic config">
+      <option name="closed" value="true" />
+      <created>1743609989627</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743609989627</updated>
+    </task>
+    <task id="LOCAL-00008" summary="create main router">
+      <option name="closed" value="true" />
+      <created>1743610300966</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743610300966</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add api config to config">
+      <option name="closed" value="true" />
+      <created>1743610312485</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743610312485</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update main app">
+      <option name="closed" value="true" />
+      <created>1743610333877</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743610333877</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add ruff config">
+      <option name="closed" value="true" />
+      <created>1743698004442</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743698004442</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add DBConfig class">
+      <option name="closed" value="true" />
+      <created>1743698024176</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743698024176</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add DBHelper class">
+      <option name="closed" value="true" />
+      <created>1743698043070</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1743698043070</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add DBHelper global import">
+      <option name="closed" value="true" />
+      <created>1743780786157</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1743780786157</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add env template">
+      <option name="closed" value="true" />
+      <created>1743780796982</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1743780796982</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add environment config">
+      <option name="closed" value="true" />
+      <created>1743780825575</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1743780825575</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update gitignore">
+      <option name="closed" value="true" />
+      <created>1743780837013</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1743780837013</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add lifespan contreller">
+      <option name="closed" value="true" />
+      <created>1743780850597</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1743780850597</updated>
+    </task>
+    <task id="LOCAL-00019" summary="remove print">
+      <option name="closed" value="true" />
+      <created>1743781323266</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1743781323266</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add base class">
+      <option name="closed" value="true" />
+      <created>1743781388848</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1743781388848</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add alembic">
+      <option name="closed" value="true" />
+      <created>1743781957961</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1743781957961</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add black formatter">
+      <option name="closed" value="true" />
+      <created>1743782240681</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1743782240681</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ini" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.template" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -136,8 +307,23 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="add basic app folder" />
     <MESSAGE value="add project config" />
-    <MESSAGE value="update gitignore" />
     <MESSAGE value="add basic deps" />
-    <option name="LAST_COMMIT_MESSAGE" value="add basic deps" />
+    <MESSAGE value="create basic config" />
+    <MESSAGE value="create main router" />
+    <MESSAGE value="add api config to config" />
+    <MESSAGE value="update main app" />
+    <MESSAGE value="add ruff config" />
+    <MESSAGE value="add DBConfig class" />
+    <MESSAGE value="add DBHelper class" />
+    <MESSAGE value="add DBHelper global import" />
+    <MESSAGE value="add env template" />
+    <MESSAGE value="add environment config" />
+    <MESSAGE value="update gitignore" />
+    <MESSAGE value="add lifespan contreller" />
+    <MESSAGE value="remove print" />
+    <MESSAGE value="add base class" />
+    <MESSAGE value="add alembic" />
+    <MESSAGE value="add black formatter" />
+    <option name="LAST_COMMIT_MESSAGE" value="add black formatter" />
   </component>
 </project>

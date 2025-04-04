@@ -1,6 +1,4 @@
 from fastapi import APIRouter
-from config.config import config
+from config.config import settings
 
-router = APIRouter(
-    prefix=config.api.prefix
-)
+router = APIRouter(prefix=settings.api.prefix)
