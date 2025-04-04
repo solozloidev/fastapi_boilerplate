@@ -5,6 +5,10 @@ from sqlalchemy import pool
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
+
+import ssl
+from sqlalchemy.ext.asyncio import create_async_engine
+
 from alembic import context
 
 from config.config import settings
@@ -69,12 +73,17 @@ async def run_async_migrations() -> None:
     and associate a connection with the context.
 
     """
-
-    connectable = async_engine_from_config(
-        config.get_section(config.config_ini_section, {}),
-        prefix="sqlalchemy.",
+    ssl_context = ssl.create_default_context()
+    connectable = create_async_engine(
+        config.get_main_option("sqlalchemy.url"),
         poolclass=pool.NullPool,
+        connect_args={"ssl": ssl_context},
     )
+    # connectable = async_engine_from_config(
+    #     config.get_section(config.config_ini_section, {}),
+    #     prefix="sqlalchemy.",
+    #     poolclass=pool.NullPool,
+    # )
 
     async with connectable.connect() as connection:
         await connection.run_sync(do_run_migrations)

@@ -1,3 +1,5 @@
+import ssl
+
 from sqlalchemy.ext.asyncio import (
     create_async_engine,
     AsyncEngine,
@@ -18,12 +20,14 @@ class DBHelper:
         pool_size: int = 5,
         max_overflow: int = 10,
     ):
+        self.ssl_context = ssl.create_default_context()
         self.engine: AsyncEngine = create_async_engine(
             url=url,
             echo=echo,
             echo_pool=echo_pool,
             pool_size=pool_size,
             max_overflow=max_overflow,
+            connect_args={"ssl": self.ssl_context},
         )
 
         self.session_factory: async_sessionmaker[AsyncSession] = async_sessionmaker(
