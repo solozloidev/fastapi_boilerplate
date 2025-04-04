@@ -28,4 +28,3 @@ class Config(BaseSettings):
     db: DBConfig
 
 config = Config()
-print(config.db.url)
